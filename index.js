@@ -44,7 +44,7 @@ app.get('/admin', (req, res) => {
 app.get('/logout', (req,res) => {
     req.session.destroy((err) => {
         if (err) {
-            res.render('error', {'message': 'Unable to delete session'});
+            res.render('error', {'message': 'No se puede eliminar la sesion'});
         } else {
             res.render('index');
         }
